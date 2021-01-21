@@ -1,0 +1,24 @@
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "https://github.com/golang/"]
+	insteadOf = https://golang.org/x/
+[url "https://github.com/grpc/grpc-go"]
+	insteadOf = https://google.golang.org/grpc
+[url "git@bitbucket.org:"]
+	proxy = http://127.0.0.1:1086
+	insteadOf = https://bitbucket.org/
+[url "git@gitee.com:"]
+	insteadOf = https://gitee.com/
+[alias]
+	rvm = "!f() { git push origin HEAD:refs/for/master%${1}; }; f"
+	mine = log --author=zhangze.02 --name-status
+	mend = commit --amend --no-edit
+	clear = clean -e .vscode -fdx
+[commit]
+[color]
+	ui = true
+[include]
+	path = ~/.gitconfig_local
+
+;[includeIf "gitdir:$HOST/"]
+;	path = ~/.local/.gitconfig
